@@ -1,37 +1,52 @@
+import { Link } from "react-router";
+import useDestinations from "../../destinations/hooks/useDestination.js";
+import DestinationCard from "../../destinations/ui/DestinationCard";
 import Container from "../../../shared/components/Container";
 import SectionHeading from "../../../shared/components/SectionHeading";
 
 const DestinationsPreview = () => {
-  const destinations = [
-    "Solang Valley",
-    "Atal Tunnel",
-    "Rohtang Pass",
-    "Kasol",
-  ];
+  const { destination, loading, error } = useDestinations();
+
+  const featuredDestinations = destination.slice(0, 4);
 
   return (
-    <section className="bg-[var(--color-background)] py-20 md:py-28">
+    <section className="py-20">
       <Container>
         <SectionHeading
-          title="Explore Manali"
-          subtitle="Discover some of the most popular destinations around Manali."
+          title="Places We Take You"
+          subtitle="From scenic valleys to breathtaking Himalayan destinations."
         />
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {destinations.map((destination) => (
-            <div
-              key={destination}
-              className="overflow-hidden rounded-2xl bg-white"
-            >
-              <div className="aspect-[4/3] bg-gray-200" />
+        {loading && (
+          <p className="mt-10 text-center text-[var(--color-text-muted)]">
+            Loading destinations...
+          </p>
+        )}
 
-              <div className="p-5">
-                <h3 className="font-[var(--font-heading)] text-xl font-semibold">
-                  {destination}
-                </h3>
-              </div>
-            </div>
-          ))}
+        {error && (
+          <p className="mt-10 text-center text-red-500">
+            Unable to load destinations.
+          </p>
+        )}
+
+        {!loading && !error && (
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {featuredDestinations.map((destination) => (
+              <DestinationCard
+                key={destination.id}
+                destination={destination}
+              />
+            ))}
+          </div>
+        )}
+
+        <div className="mt-10 text-center">
+          <Link
+            to="/destinations"
+            className="inline-flex rounded-lg border border-[var(--color-primary)] px-6 py-3 font-medium text-[var(--color-primary)] transition hover:bg-[var(--color-primary)] hover:text-white"
+          >
+            Explore All Destinations
+          </Link>
         </div>
       </Container>
     </section>

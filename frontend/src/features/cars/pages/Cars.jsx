@@ -1,36 +1,48 @@
-import SectionHeading from "../../../shared/components/SectionHeading";
-import useCars from "../hooks/useCars"
-import CarCard from "../ui/CarCard";
 import Container from "../../../shared/components/Container";
-
+import SectionHeading from "../../../shared/components/SectionHeading";
+import CarCard from "../ui/CarCard";
+import  useCars  from "../hooks/useCars.js";
 
 const Cars = () => {
+  const { cars, loading, error } = useCars();
 
-  const {cars,loading,error} = useCars()
-  if(loading){
-    return <div>Loading Cars...</div>
-  }
-  if(error){
-    return <div>Error loading Cars</div>
-  }
+  return (
+    <main>
+      <section className="py-20">
+        <Container>
 
-return (
-    <section className="py-20 md:py-28">
-      <Container>
-        <SectionHeading
-          title="Our Cars"
-          subtitle="Choose a vehicle that fits your journey."
-        />
+          <SectionHeading
+            title="Our Cars"
+            subtitle="Choose from our comfortable and reliable vehicles for your Manali journey."
+          />
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {cars.map((car) => (
-            <CarCard key={car.id} car={car} />
-          ))}
-        </div>
-      </Container>
-    </section>
+          {loading && (
+            <p className="mt-10 text-center">
+              Loading cars...
+            </p>
+          )}
+
+          {error && (
+            <p className="mt-10 text-center text-red-500">
+              Unable to load cars.
+            </p>
+          )}
+
+          {!loading && !error && (
+            <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {cars.map((car) => (
+                <CarCard
+                  key={car.id}
+                  car={car}
+                />
+              ))}
+            </div>
+          )}
+
+        </Container>
+      </section>
+    </main>
   );
 };
 
-
-export default Cars
+export default Cars;

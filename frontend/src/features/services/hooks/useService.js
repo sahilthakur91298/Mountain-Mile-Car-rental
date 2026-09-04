@@ -3,7 +3,7 @@ import {getService} from "../api/serviceApi.js"
 
 const useService = () =>{
 
-    const [service, setService] = useState([])
+    const [services, setServices] = useState([])
     const [loading,setLoading] = useState(false)
     const [error, setError] = useState(null)
 
@@ -13,7 +13,7 @@ const useService = () =>{
                 setLoading(true)
                 const data = await getService()
                 console.log(data)
-                setService(data)
+                setServices(data)
             }
             catch(err){
                 setError(err)
@@ -25,7 +25,7 @@ const useService = () =>{
             allService()
         },[])
     return {
-        service,
+        services,
         loading,
         error
     }
