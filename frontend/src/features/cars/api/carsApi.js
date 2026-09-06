@@ -1,79 +1,110 @@
-
 const cars = [
-    {
-        id: 1,
-        title: "Maruti Suzuki Jimny",
-        type: "SUV",
-        seats: 5,
-        price: 5000,
-        priceUnit: "per day",
-        image: "../images/cars/jimny.jpg",
-        description: "The Maruti Suzuki Jimny is a compact SUV that offers a perfect blend of style, performance, and off-road capability. With its rugged design and advanced features, it is a comfortable SUV suitable for family trips and mountain travel."
+  {
+    id: "maruti-jimny",
+    title: "Maruti Suzuki Jimny",
+    type: "SUV",
+    specs: { 
+      seats: 4, 
+      transmission: ["Automatic", "Manual"], 
+      fuel: ["Petrol"], 
+      ac: true 
+    },
+    pricing: { amount: 5000, unit: "per day" },
+    image: "/images/cars/jimny.jpg",
+    description: "Compact and agile 4x4 SUV, perfect for off-road trails and mountain travel.",
+    features: ["4x4 Capability", "Air Conditioning", "Compact Design"]
+  },
+  {
+    id: "maruti-alto",
+    title: "Maruti Suzuki Alto",
+    type: "Hatchback",
+    specs: { 
+      seats: 5, 
+      transmission: ["Manual"], 
+      fuel: ["Petrol"], 
+      ac: true 
+    },
+    pricing: { amount: 3000, unit: "per day" },
+    image: "/images/cars/alto.webp",
+    description: "A fuel-efficient hatchback with easy handling, ideal for city drives and short trips.",
+    features: ["Fuel Efficient", "Air Conditioning", "Easy City Driving"]
+  },
+  {
+    id: "mahindra-thar",
+    title: "Mahindra Thar",
+    type: "SUV",
+    specs: { 
+      seats: 4, 
+      transmission: ["Automatic", "Manual"], 
+      fuel: ["Petrol", "Diesel"], 
+      ac: true 
+    },
+    pricing: { amount: 6000, unit: "per day" },
+    image: "/images/cars/Thar.avif",
+    description: "A robust 3-door SUV designed for pure off-road adventures and rugged mountain travel.",
+    features: ["Off-Road Capability", "Air Conditioning", "4x4 Drivetrain"]
+  },
+  {
+    id: "mahindra-thar-roxx",
+    title: "Mahindra Thar Roxx",
+    type: "SUV",
+    specs: { 
+      seats: 5, 
+      transmission: ["Automatic", "Manual"], 
+      fuel: ["Petrol", "Diesel"], 
+      ac: true 
+    },
+    pricing: { amount: 7000, unit: "per day" },
+    image: "/images/cars/TharRoxx.jpg",
+    description: "A premium 5-door SUV with enhanced features and a refined interior for adventurous journeys.",
+    features: ["Premium Interior", "Off-Road Capability", "Air Conditioning"]
+  },
+  {
+    id: "mahindra-scorpio",
+    title: "Mahindra Scorpio",
+    type: "SUV",
+    specs: { 
+      seats: 7, 
+      transmission: ["Automatic", "Manual"], 
+      fuel: ["Diesel"], 
+      ac: true 
+    },
+    pricing: { amount: 6000, unit: "per day" },
+    image: "/images/cars/scorpio.jpg",
+    description: "A spacious SUV ideal for family outings and long drives through the mountains.",
+    features: ["7 Seats", "Ample Storage", "Air Conditioning"]
+  },
+  {
+    id: "maruti-ertiga",
+    title: "Maruti Suzuki Ertiga",
+    type: "MUV",
+    specs: { 
+      seats: 7, 
+      transmission: ["Automatic", "Manual"], 
+      fuel: ["Petrol"], 
+      ac: true 
+    },
+    pricing: { amount: 6000, unit: "per day" },
+    image: "/images/cars/ertiga.jpg",
+    description: "A practical and comfortable MUV with generous space for family journeys.",
+    features: ["7 Seats", "Spacious Interior", "Air Conditioning"]
+  },
+  {
+    id: "toyota-fortuner",
+    title: "Toyota Fortuner",
+    type: "SUV",
+    specs: { 
+      seats: 7, 
+      transmission: ["Automatic", "Manual"], 
+      fuel: ["Petrol", "Diesel"], 
+      ac: true 
+    },
+    pricing: { amount: 6000, unit: "per day" },
+    image: "/images/cars/fortuner.webp",
+    description: "A powerful and luxurious SUV built for premium on-road and off-road travel.",
+    features: ["7 Seats", "Premium Interior", "Advanced Safety Features"]
+  }
+];
 
-    },
-    {
-        id: 2,
-        title: "Mahindra Thar",
-        type: "SUV",
-        seats: 5,
-        price: 6000,
-        priceUnit: "per day",
-        image: "../images/cars/Thar.avif",
-        description: "The Mahindra Thar is a robust SUV designed for off-road adventures. It combines durability with comfort, making it an excellent choice for those who love exploring rough terrains."
 
-    },
-    {
-        id: 3,
-        title: "Mahindra Thar Roxx",
-        type: "SUV",
-        seats: 5,
-        price: 7000,
-        priceUnit: "per day",
-        image: "../images/cars/TharRoxx.jpg",
-        description: "The Mahindra Thar Roxx is a premium version of the popular Thar, offering enhanced features and a more luxurious interior for a comfortable driving experience."
-    },
-    {
-        id: 4,
-        title: "Maruti Suzuki Alto",
-        type: "Hatchback",
-        seats: 5,
-        price: 3000,
-        priceUnit: "per day",
-        image: "../images/cars/alto.webp",
-        description: "The Maruti Suzuki Alto is a fuel-efficient hatchback perfect for city driving. It offers a comfortable ride and easy handling in congested traffic."
-    },
-    {
-        id: 5,
-        title: "Mahindra Scorpio",
-        type: "SUV",
-        seats: 7,
-        price: 6000,
-        priceUnit: "per day",
-        image: "../images/cars/scorpio.jpg",
-        description: "The Mahindra Scorpio is a spacious SUV ideal for family outings and long drives. It offers a comfortable ride and ample storage space for all your travel needs."
-    },
-    {
-        id: 6,
-        title: "Maruti Suzuki Ertiga",
-        type: "MUV",
-        seats: 5,
-        price: 6000,
-        priceUnit: "per day",
-        image: "../images/cars/ertiga.jpg",
-        description: "The Maruti Suzuki Ertiga is a fuel-efficient hatchback perfect for city driving. It offers a comfortable ride and easy handling in congested traffic."
-    },
-    {
-        id: 7,
-        title: "Toyota Fortuner",
-        type: "SUV",
-        seats: 5,
-        price: 6000,
-        priceUnit: "per day",
-        image: "../images/cars/fortuner.webp",
-        description: "The Toyota Fortuner is a powerful SUV designed for both on-road and off-road adventures. It offers a luxurious interior and advanced safety features for a premium driving experience."
-    }
-]
-
-export const getCars = async ()=>{
-    return cars
-}
+export const getCars = async () => cars;

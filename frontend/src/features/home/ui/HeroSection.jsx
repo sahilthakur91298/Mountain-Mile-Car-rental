@@ -3,12 +3,12 @@ import Container from "../../../shared/components/Container";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[calc(100vh-80px)] overflow-hidden">
+    <section className="relative min-h-[calc(100vh-80px)] overflow-hidden ">
       
       {/* Background Image */}
       <img
-        src="../images/hero/hero2.webp"
-        alt="Mountain road in Manali"
+        src="../images/hero/heromountain.jpg"
+        alt="Mountain landscape in Manali"
         className="absolute inset-0 h-full w-full object-cover"
       />
 

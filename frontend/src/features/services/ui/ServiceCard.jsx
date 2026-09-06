@@ -3,10 +3,11 @@ const ServiceCard = ({ service }) => {
   return (
     <article className="group overflow-hidden rounded-2xl border border-[var(--color-border)] bg-white">
       {/* Image */}
-      <div className="aspect-[16/10] overflow-hidden">
+      <div className="aspect-[4/3] overflow-hidden">
         <img
           src={service.image}
-          alt={service.id}
+          alt={`${service.id} in Manali`}
+          loading="lazy"
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
       </div>

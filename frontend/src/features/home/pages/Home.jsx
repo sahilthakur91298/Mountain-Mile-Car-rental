@@ -2,7 +2,7 @@ import AboutPreview from '../ui/AboutPreview'
 import ChooseUs from '../ui/ChooseUs'
 import DestinationsPreview from '../ui/DestinationsPreview'
 import FeaturedCars from '../ui/FeaturedCars'
-import HeroSection from '../ui/Herosection'
+import HeroSection from '../ui/HeroSection'
 import HomeCTA from '../ui/HomeCTA'
 import ServicesPreview from '../ui/ServicesPreview'
 

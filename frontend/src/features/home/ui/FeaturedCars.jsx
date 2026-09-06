@@ -1,6 +1,6 @@
 import Container from "../../../shared/components/Container";
 import SectionHeading from "../../../shared/components/SectionHeading";
-import { NavLink } from "react-router";
+import { Link } from "react-router";
 import useCars from "../../cars/hooks/useCars.js";
 import CarCard from "../../cars/ui/CarCard";
 
@@ -10,11 +10,11 @@ const FeaturedCars = () => {
 
   const featuredCars = cars.slice(0,3)
   return (
-    <section className="bg-[var(--color-background)] py-20 md:py-28">
+    <section className="bg-[var(--color-background)] py-16 sm:py-20 lg:py-24">
       <Container>
         <SectionHeading
-          title="Our Fleet"
-          subtitle="Choose the right car for your journey."
+          title="Choose Your Ride"
+            subtitle="Comfortable and reliable vehicles for every kind of mountain journey."
         />
          {loading && (
           <p className="mt-10 text-center text-[var(--color-text-muted)]">
@@ -36,12 +36,9 @@ const FeaturedCars = () => {
         )}
 
         <div className="mt-10 text-center">
-          <NavLink
-            to="/cars"
-            className="inline-flex rounded-lg border border-[var(--color-primary)] px-6 py-3 font-medium text-[var(--color-primary)] transition hover:bg-[var(--color-primary)] hover:text-white"
-          >
+          <Link to="/cars" className="inline-flex rounded-lg border border-[var(--color-primary)] px-6 py-3 font-medium text-[var(--color-primary)] transition hover:bg-[var(--color-primary)] hover:text-white">
             View All Cars
-          </NavLink>
+          </Link>
         </div>
       </Container>
     </section>

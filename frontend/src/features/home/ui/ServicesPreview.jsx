@@ -10,7 +10,7 @@ const ServicesPreview = () => {
   const featuredServices = services.slice(0, 3);
 
   return (
-    <section className="bg-[var(--color-background)] py-20">
+    <section className="py-16 sm:py-20 lg:py-24">
       <Container>
         <SectionHeading
           title="Our Services"

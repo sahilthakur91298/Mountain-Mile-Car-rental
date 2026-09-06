@@ -5,7 +5,8 @@ const DestinationCard = ({ destination }) => {
       <div className="aspect-[4/5] overflow-hidden">
         <img
           src={destination.image}
-          alt={destination.id}
+          alt={`${destination.id} near Manali`}
+          loading="lazy"
           className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
       </div>

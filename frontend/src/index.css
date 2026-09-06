@@ -42,3 +42,18 @@ h5,
 h6 {
   font-family: var(--font-heading);
 }
+
+
+::selection {
+  background: var(--color-primary);
+  color: white;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
