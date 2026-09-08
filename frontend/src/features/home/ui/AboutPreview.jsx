@@ -18,15 +18,7 @@ const AboutPreview = () => {
             </div>
 
             {/* Experience Badge */}
-            <div className="absolute -bottom-6 -right-4 rounded-xl bg-[var(--color-primary)] px-6 py-5 text-white shadow-xl sm:-right-6">
-              <p className="font-heading text-3xl font-semibold">
-                Manali
-              </p>
-
-              <p className="mt-1 text-sm text-white/70">
-                Your mountain journey starts here
-              </p>
-            </div>
+            
           </div>
 
           {/* Content */}

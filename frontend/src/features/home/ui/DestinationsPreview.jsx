@@ -47,9 +47,10 @@ const DestinationsPreview = () => {
 
           <Link
             to="/destinations"
-            className="hidden text-sm font-semibold transition hover:text-[var(--color-accent)] lg:block"
+            className="group hidden items-center text-sm font-semibold text-[var(--color-accent-light)] transition-colors hover:text-white lg:inline-flex"
           >
-            Explore All Destinations →
+            Explore All Destinations 
+            <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">→</span>
           </Link>
         </div>
 
@@ -64,12 +65,13 @@ const DestinationsPreview = () => {
         </div>
 
         {/* Mobile CTA */}
-        <div className="mt-8 lg:hidden">
+        <div className="mt-8 lg:hidden text-center">
           <Link
             to="/destinations"
-            className="text-sm font-semibold text-white transition hover:text-[var(--color-accent)]"
+            className="group inline-flex items-center justify-center rounded-xl border border-[var(--color-accent)]/30 bg-[var(--color-accent)]/10 px-6 py-3.5 text-sm font-semibold text-[var(--color-accent-light)] transition-all hover:bg-[var(--color-accent)] hover:text-white"
           >
-            Explore All Destinations →
+            Explore All Destinations
+            <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">→</span>
           </Link>
         </div>
       </Container>

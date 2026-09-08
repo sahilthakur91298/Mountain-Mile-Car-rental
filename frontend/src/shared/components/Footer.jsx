@@ -37,72 +37,40 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h2 className="font-heading text-lg font-semibold">
+            <h2 className="font-heading text-xl font-semibold text-white tracking-wide">
               Quick Links
             </h2>
 
-            <nav className="mt-5 flex flex-col gap-3">
-              <Link
-                to="/"
-                className="text-sm text-white/70 transition hover:text-white"
-              >
-                Home
-              </Link>
-
-              <Link
-                to="/cars"
-                className="text-sm text-white/70 transition hover:text-white"
-              >
-                Cars
-              </Link>
-
-              <Link
-                to="/services"
-                className="text-sm text-white/70 transition hover:text-white"
-              >
-                Services
-              </Link>
-
-              <Link
-                to="/destinations"
-                className="text-sm text-white/70 transition hover:text-white"
-              >
-                Destinations
-              </Link>
-
-              <Link
-                to="/about"
-                className="text-sm text-white/70 transition hover:text-white"
-              >
-                About Us
-              </Link>
-
-              <Link
-                to="/contact"
-                className="text-sm text-white/70 transition hover:text-white"
-              >
-                Contact
-              </Link>
+            <nav className="mt-6 flex flex-col gap-4">
+              {['Home', 'Cars', 'Services', 'Destinations', 'About', 'Contact'].map((item) => (
+                <Link
+                  key={item}
+                  to={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`}
+                  className="group flex items-center text-sm font-medium text-white/70 transition-all duration-300 hover:text-white hover:translate-x-1"
+                >
+                  <span className="mr-2 h-1 w-1 rounded-full bg-[var(--color-accent)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
+                  {item}
+                </Link>
+              ))}
             </nav>
           </div>
 
           {/* Contact */}
           <div>
-            <h2 className="font-heading text-lg font-semibold">
+            <h2 className="font-heading text-xl font-semibold text-white tracking-wide">
               Contact
             </h2>
 
-            <div className="mt-5 space-y-4">
+            <div className="mt-6 space-y-5">
               {phone && (
                 <a
                   href={`tel:${phone}`}
-                  className="block text-sm text-white/70 transition hover:text-white"
+                  className="group flex flex-col text-sm text-white/70 transition-all duration-300 hover:text-white hover:-translate-y-0.5"
                 >
-                  <span className="block text-xs uppercase tracking-wide text-white/40">
+                  <span className="mb-1 text-xs uppercase tracking-wider text-[var(--color-accent-light)]">
                     Phone
                   </span>
-
-                  <span className="mt-1 block">
+                  <span className="font-medium">
                     {phone}
                   </span>
                 </a>
@@ -113,13 +81,12 @@ const Footer = () => {
                   href={`https://wa.me/${whatsapp}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block text-sm text-white/70 transition hover:text-white"
+                  className="group flex flex-col text-sm text-white/70 transition-all duration-300 hover:text-white hover:-translate-y-0.5"
                 >
-                  <span className="block text-xs uppercase tracking-wide text-white/40">
+                  <span className="mb-1 text-xs uppercase tracking-wider text-[var(--color-accent-light)]">
                     WhatsApp
                   </span>
-
-                  <span className="mt-1 block">
+                  <span className="font-medium">
                     Chat with us
                   </span>
                 </a>
@@ -128,13 +95,12 @@ const Footer = () => {
               {email && (
                 <a
                   href={`mailto:${email}`}
-                  className="block break-all text-sm text-white/70 transition hover:text-white"
+                  className="group flex flex-col break-all text-sm text-white/70 transition-all duration-300 hover:text-white hover:-translate-y-0.5"
                 >
-                  <span className="block text-xs uppercase tracking-wide text-white/40">
+                  <span className="mb-1 text-xs uppercase tracking-wider text-[var(--color-accent-light)]">
                     Email
                   </span>
-
-                  <span className="mt-1 block">
+                  <span className="font-medium">
                     {email}
                   </span>
                 </a>

@@ -35,9 +35,10 @@ const FeaturedCars = () => {
           </div>
         )}
 
-        <div className="mt-10 text-center">
-          <Link to="/cars" className="inline-flex rounded-lg border border-[var(--color-primary)] px-6 py-3 font-medium text-[var(--color-primary)] transition hover:bg-[var(--color-primary)] hover:text-white">
+        <div className="mt-14 text-center">
+          <Link to="/cars" className="group inline-flex items-center justify-center rounded-xl border-2 border-[var(--color-primary)] px-8 py-3.5 text-sm font-bold text-[var(--color-primary)] transition-all duration-300 hover:bg-[var(--color-primary)] hover:text-white hover:shadow-lg hover:shadow-[var(--color-primary)]/20 active:scale-95">
             View All Cars
+            <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">→</span>
           </Link>
         </div>
       </Container>

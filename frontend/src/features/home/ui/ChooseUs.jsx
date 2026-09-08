@@ -41,23 +41,25 @@ const ChooseUs = () => {
           subtitle="More than just a ride — we help make your mountain journey comfortable, reliable and memorable."
         />
 
-        <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {reasons.map((reason) => (
             <article
               key={reason.id}
-              className="group border-t border-[var(--color-border)] pt-6"
+              className="group relative overflow-hidden rounded-2xl border border-[var(--color-border)] bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-[var(--color-accent)]/30"
             >
-              <span className="text-sm font-semibold tracking-widest text-[var(--color-accent)]">
+              <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--color-primary)]/5 text-lg font-bold text-[var(--color-accent)] transition-colors duration-300 group-hover:bg-[var(--color-accent)] group-hover:text-white">
                 {reason.number}
-              </span>
+              </div>
 
-              <h3 className="mt-5 font-heading text-2xl font-semibold text-[var(--color-secondary)]">
+              <h3 className="font-heading text-xl font-semibold text-[var(--color-secondary)]">
                 {reason.title}
               </h3>
 
-              <p className="mt-3 text-sm leading-7 text-[var(--color-text-muted)]">
+              <p className="mt-4 text-sm leading-relaxed text-[var(--color-text-muted)]">
                 {reason.description}
               </p>
+              
+              <div className="absolute -bottom-2 -right-2 h-24 w-24 rounded-full bg-gradient-to-br from-[var(--color-primary)]/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
             </article>
           ))}
         </div>
