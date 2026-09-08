@@ -52,9 +52,16 @@ const Cars = () => {
         canonical={`${siteConfig.url}/cars`}
       />
       {/* Page Header */}
-      <section className="bg-[var(--color-secondary)] py-20 text-white sm:py-24">
+      <section className="relative overflow-hidden bg-[var(--color-secondary)] py-20 text-white sm:py-24">
+        <img
+          className="absolute inset-0 z-0 h-full w-full object-cover object-center opacity-40"
+          src="/images/cars/herocar.jpg"
+          alt=""
+        />
+        
         <Container>
           <div className="max-w-3xl">
+            
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)]">
               Our Fleet
             </p>
