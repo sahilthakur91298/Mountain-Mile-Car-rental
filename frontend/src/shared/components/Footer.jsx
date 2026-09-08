@@ -1,80 +1,160 @@
-import { NavLink } from "react-router";
-import Container from "./Container";
+import { Link } from "react-router";
+import { siteConfig } from "../../config/siteConfig";
 
 const Footer = () => {
+  const { phone, whatsapp, email } = siteConfig.contact;
+
   return (
-    <footer className="bg-[var(--color-secondary)] text-white">
-      <Container>
-        <div className="grid gap-10 py-14 md:grid-cols-3">
-
+    <footer className="border-t border-[var(--color-border)] bg-[var(--color-secondary)] text-white">
+      <div className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
-          <div>
-            <h2 className="font-[var(--font-heading)] text-2xl font-semibold">
-              The Mountain Mile
-            </h2>
+          <div className="lg:col-span-2">
+            <Link to="/" className="inline-block">
+               <div>
+              <h1 className="text-white text-xl font-bold tracking-wide text-[var(--color-primary)]">
+                The Mountain Mile
+              </h1>
 
-            <p className="mt-4 max-w-sm text-sm leading-6 text-gray-300">
-              Your trusted car rental and taxi service in Manali.
-              Explore the mountains comfortably with us.
+              <p className=" text-[10px] uppercase tracking-[0.2em] text-white-500 sm:flex">
+                Car Rental & Taxi Service
+              </p>
+            </div>
+            </Link>
+
+            <p className="mt-5 max-w-md text-sm leading-6 text-white/70">
+              Reliable car rental and taxi services in Manali for local
+              sightseeing, mountain travel and outstation journeys.
             </p>
+
+            <Link
+              to="/booking"
+              className="mt-6 inline-flex rounded-full bg-[var(--color-accent)] px-5 py-2.5 text-sm font-semibold text-white transition hover:opacity-90"
+            >
+              Send an Enquiry
+            </Link>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider">
+            <h2 className="font-heading text-lg font-semibold">
               Quick Links
-            </h3>
+            </h2>
 
-            <div className="flex flex-col gap-3 text-sm text-gray-300">
-              <NavLink to="/" className="hover:text-white">
+            <nav className="mt-5 flex flex-col gap-3">
+              <Link
+                to="/"
+                className="text-sm text-white/70 transition hover:text-white"
+              >
                 Home
-              </NavLink>
+              </Link>
 
-              <NavLink to="/cars" className="hover:text-white">
+              <Link
+                to="/cars"
+                className="text-sm text-white/70 transition hover:text-white"
+              >
                 Cars
-              </NavLink>
+              </Link>
 
-              <NavLink to="/services" className="hover:text-white">
+              <Link
+                to="/services"
+                className="text-sm text-white/70 transition hover:text-white"
+              >
                 Services
-              </NavLink>
+              </Link>
 
-              <NavLink to="/destinations" className="hover:text-white">
+              <Link
+                to="/destinations"
+                className="text-sm text-white/70 transition hover:text-white"
+              >
                 Destinations
-              </NavLink>
-            </div>
+              </Link>
+
+              <Link
+                to="/about"
+                className="text-sm text-white/70 transition hover:text-white"
+              >
+                About Us
+              </Link>
+
+              <Link
+                to="/contact"
+                className="text-sm text-white/70 transition hover:text-white"
+              >
+                Contact
+              </Link>
+            </nav>
           </div>
 
           {/* Contact */}
           <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider">
+            <h2 className="font-heading text-lg font-semibold">
               Contact
-            </h3>
+            </h2>
 
-            <div className="space-y-3 text-sm text-gray-300">
-              <p>Manali, Himachal Pradesh</p>
+            <div className="mt-5 space-y-4">
+              {phone && (
+                <a
+                  href={`tel:${phone}`}
+                  className="block text-sm text-white/70 transition hover:text-white"
+                >
+                  <span className="block text-xs uppercase tracking-wide text-white/40">
+                    Phone
+                  </span>
 
-              <a
-                href="tel:+910000000000"
-                className="block hover:text-white"
-              >
-                +91 XXXXX XXXXX
-              </a>
+                  <span className="mt-1 block">
+                    {phone}
+                  </span>
+                </a>
+              )}
 
-              <a
-                href="mailto:info@example.com"
-                className="block hover:text-white"
-              >
-                info@example.com
-              </a>
+              {whatsapp && (
+                <a
+                  href={`https://wa.me/${whatsapp}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-sm text-white/70 transition hover:text-white"
+                >
+                  <span className="block text-xs uppercase tracking-wide text-white/40">
+                    WhatsApp
+                  </span>
+
+                  <span className="mt-1 block">
+                    Chat with us
+                  </span>
+                </a>
+              )}
+
+              {email && (
+                <a
+                  href={`mailto:${email}`}
+                  className="block break-all text-sm text-white/70 transition hover:text-white"
+                >
+                  <span className="block text-xs uppercase tracking-wide text-white/40">
+                    Email
+                  </span>
+
+                  <span className="mt-1 block">
+                    {email}
+                  </span>
+                </a>
+              )}
             </div>
           </div>
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-white/10 py-5 text-center text-sm text-gray-400">
-          © {new Date().getFullYear()} The Mountain Mile. All rights reserved.
+        <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
+          <p>
+            © {new Date().getFullYear()} {siteConfig.name}. All rights
+            reserved.
+          </p>
+
+          <p>
+            Car Rental & Taxi Service in Manali
+          </p>
         </div>
-      </Container>
+      </div>
     </footer>
   );
 };

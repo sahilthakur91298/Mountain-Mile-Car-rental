@@ -1,5 +1,7 @@
+import { siteConfig } from "../../../config/siteConfig";
 import Container from "../../../shared/components/Container";
 import SectionHeading from "../../../shared/components/SectionHeading";
+import SEO from "../../../shared/components/SEO";
 import useService from "../hooks/useService";
 import ServiceCard from "../ui/ServiceCard";
 
@@ -9,6 +11,11 @@ const Services = () => {
 
   return (
     <main>
+      <SEO
+        title="Taxi & Travel Services in Manali"
+        description="Book local taxi, sightseeing, car rental and outstation taxi services in Manali with The Mountain Mile."
+        canonical={`${siteConfig.url}/services`}
+      />
       <section className="py-20">
         <Container>
           <SectionHeading

@@ -2,12 +2,19 @@ import Container from "../../../shared/components/Container";
 import SectionHeading from "../../../shared/components/SectionHeading";
 import DestinationCard from "../ui/DestinationCard";
 import  useDestination from "../hooks/useDestination.js";
+import SEO from "../../../shared/components/SEO.jsx";
+import { siteConfig } from "../../../config/siteConfig.jsx";
 
 const Destinations = () => {
   const { destination, loading, error } = useDestination();
 
   return (
     <main>
+      <SEO
+        title="Manali Sightseeing & Nearby Destinations"
+        description="Explore Solang Valley, Atal Tunnel, Rohtang Pass, Kasol and other popular destinations around Manali with The Mountain Mile."
+        canonical={`${siteConfig.url}/destinations`}
+      />
       <section className="py-20">
         <Container>
           <SectionHeading

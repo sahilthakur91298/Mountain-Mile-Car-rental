@@ -7,6 +7,7 @@ import Destination from "../../features/destinations/pages/Destination"
 import Services from "../../features/services/pages/Services"
 import Home from "../../features/home/pages/Home"
 import About from "../../features/about/pages/About"
+import NotFound from "../../shared/components/NotFound"
 
 
 const router = createBrowserRouter([
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
                 {
                     path: "services",
                     element: <Services />
+                },
+                {
+                    path: "*",
+                    element: <NotFound />,
                 }
             ]
         }

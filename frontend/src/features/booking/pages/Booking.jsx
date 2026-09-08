@@ -1,9 +1,16 @@
+import { siteConfig } from "../../../config/siteConfig";
 import Container from "../../../shared/components/Container";
+import SEO from "../../../shared/components/SEO";
 import BookingForm from "../ui/BookingForm";
 
 const Booking = () => {
   return (
     <main>
+      <SEO
+        title="Book a Taxi or Car Rental in Manali"
+        description="Send your travel enquiry to The Mountain Mile for car rental, taxi, sightseeing and outstation travel services in Manali."
+        canonical={`${siteConfig.url}/booking`}
+      />
       <section className="bg-[var(--color-background)] py-16 sm:py-20 lg:py-24">
         <Container>
           <div className="mx-auto max-w-3xl text-center">

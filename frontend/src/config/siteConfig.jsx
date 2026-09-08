@@ -4,10 +4,12 @@ export const siteConfig = {
 
   tagline: "Car Rental & Taxi Service in Manali",
 
+  url: "https://themountainmile.com",
+
   contact: {
     phone: "+918350942627",
-    whatsapp: "+918350942627",
-    email: "tsahil602@gmail.com",
+    whatsapp: "917018491298",
+    email: "",
   },
 
   social: {

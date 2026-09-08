@@ -4,6 +4,8 @@ import CarCard from "../ui/CarCard";
 import  useCars  from "../hooks/useCars.js";
 import { useState } from "react";
 import CarFilters from "../ui/CarFilters.jsx";
+import SEO from "../../../shared/components/SEO";
+import { siteConfig } from "../../../config/siteConfig";
 
 const Cars = () => {
   const { cars, loading, error } = useCars();
@@ -42,7 +44,13 @@ const Cars = () => {
   }
 
   return (
+    
     <main>
+      <SEO
+        title="Car Rental in Manali"
+        description="Explore comfortable cars and SUVs available for rental in Manali. Choose from automatic and manual vehicles for your mountain journey."
+        canonical={`${siteConfig.url}/cars`}
+      />
       {/* Page Header */}
       <section className="bg-[var(--color-secondary)] py-20 text-white sm:py-24">
         <Container>
