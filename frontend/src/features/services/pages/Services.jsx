@@ -21,7 +21,7 @@ const Services = () => {
       <section className="relative overflow-hidden bg-[var(--color-secondary)] py-20 text-white sm:py-24">
         <img
           className="absolute inset-0 z-0 h-full w-full object-cover object-center opacity-35"
-          src="/images/services/car rental.avif"
+          src="/images/services/car rental.webp"
           alt=""
           aria-hidden="true"
         />

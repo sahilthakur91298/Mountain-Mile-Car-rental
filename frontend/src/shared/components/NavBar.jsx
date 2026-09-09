@@ -58,7 +58,7 @@ const Navbar = () => {
           className="shrink-0 transition-transform duration-300 hover:scale-105"
         >
           <img
-            src="../images/logo/logo.png"
+            src="../images/logo/logo.webp"
             alt="The Mountain Mile"
             className="h-18 w-auto"
           />

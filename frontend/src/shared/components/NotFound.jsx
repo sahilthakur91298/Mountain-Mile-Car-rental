@@ -3,6 +3,12 @@ import Container from "./Container";
 
 const NotFound = () => {
   return (
+    <>
+    <SEO
+      title="Page Not Found"
+      description="The page you are looking for could not be found."
+      noIndex
+    />
     <main className="flex min-h-[70vh] items-center bg-[var(--color-background)] py-20">
       <Container>
         <div className="mx-auto max-w-2xl text-center">
@@ -37,6 +43,7 @@ const NotFound = () => {
         </div>
       </Container>
     </main>
+    </>
   );
 };
 

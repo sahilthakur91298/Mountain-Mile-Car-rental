@@ -30,7 +30,7 @@ const Cars = () => {
       </main>
     );
   }
-
+  
   if (error) {
     return (
       <main className="py-24">
@@ -42,22 +42,27 @@ const Cars = () => {
       </main>
     );
   }
-
+  
   return (
-    
+    <>
+    <SEO
+      title="Car Rental in Manali"
+      description="Explore comfortable and reliable cars for rent in Manali. Choose from our range of vehicles for local sightseeing, outstation trips and Himalayan travel."
+      canonical="/cars"
+    />
     <main>
       <SEO
         title="Car Rental in Manali"
         description="Explore comfortable cars and SUVs available for rental in Manali. Choose from automatic and manual vehicles for your mountain journey."
         canonical={`${siteConfig.url}/cars`}
-      />
+        />
       {/* Page Header */}
       <section className="relative overflow-hidden bg-[var(--color-secondary)] py-20 text-white sm:py-24">
         <img
           className="absolute inset-0 z-0 h-full w-full object-cover object-center opacity-40"
-          src="/images/cars/herocar.jpg"
+          src="/images/cars/herocar.webp"
           alt=""
-        />
+          />
         
         <Container>
           <div className="max-w-3xl">
@@ -87,7 +92,7 @@ const Cars = () => {
           <SectionHeading
             title="Choose Your Ride"
             subtitle="Explore our available vehicles and enquire about the one that suits your journey."
-          />
+            />
 
           {/* Filters */}
           <div className="mt-10">
@@ -118,6 +123,7 @@ const Cars = () => {
         </Container>
       </section>
     </main>
+    </>
   );
 };
 

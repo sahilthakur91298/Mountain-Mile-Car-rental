@@ -4,7 +4,7 @@ const ContactHero = () => {
   return (
     <section className="relative overflow-hidden bg-[var(--color-secondary)] py-20 text-white sm:py-24 lg:py-28">
       <img
-        src="/images/hero/heromountain.jpg"
+        src="/images/hero/heromountain.webp"
         alt=""
         aria-hidden="true"
         className="absolute inset-0 h-full w-full object-cover object-center opacity-40"

@@ -11,13 +11,11 @@ const AboutPreview = () => {
           <div className="relative">
             <div className="overflow-hidden rounded-2xl">
               <img
-                src="../images/about/about1.jpg"
+                src="../images/about/about1.webp"
                 alt="Mountain journey in Manali"
                 className="aspect-[4/5] w-full object-cover transition-transform duration-700 hover:scale-105"
               />
             </div>
-
-            {/* Experience Badge */}
             
           </div>
 

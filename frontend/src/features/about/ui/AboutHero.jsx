@@ -4,7 +4,7 @@ const AboutHero = () => {
   return (
     <section className="relative overflow-hidden bg-[var(--color-secondary)] py-24 sm:py-28 lg:py-32">
       <img
-        src="/images/about/about1.jpg"
+        src="/images/about/about1.webp"
         alt="The Mountain Mile car rental and taxi service in Manali"
         className="absolute inset-0 h-full w-full object-cover object-center "
       />

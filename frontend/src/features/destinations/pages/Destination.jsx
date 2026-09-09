@@ -20,7 +20,7 @@ const Destinations = () => {
       <section className="relative overflow-hidden bg-[var(--color-secondary)] py-20 text-white sm:py-24">
         <img
           className="absolute inset-0 z-0 h-full w-full object-cover object-center opacity-40"
-          src="/images/destinations/hero3.jpg"
+          src="/images/destinations/hero3.webp"
           alt=""
           aria-hidden="true"
         />

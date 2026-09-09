@@ -3,6 +3,7 @@ import { siteConfig } from "../../config/siteConfig";
 
 const Footer = () => {
   const { phone, whatsapp, email } = siteConfig.contact;
+  const { instagram } = siteConfig.social;
 
   return (
     <footer className="border-t border-[var(--color-border)] bg-[var(--color-secondary)] text-white">
@@ -104,6 +105,26 @@ const Footer = () => {
                     {email}
                   </span>
                 </a>
+              )}
+
+              {instagram && (
+                <a
+                  href={instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex flex-col text-sm text-white/70 transition-all duration-300 hover:-translate-y-0.5 hover:text-white"
+                >
+                  <span className="mb-1 text-xs uppercase tracking-wider text-[var(--color-accent-light)]">
+                    Instagram
+                  </span>
+                  <span className="font-medium">Follow us on Instagram</span>
+                </a>
+              )}
+
+              {!phone && !whatsapp && !email && !instagram && (
+                <p className="text-sm text-white/70">
+                  Contact details will be available soon.
+                </p>
               )}
             </div>
           </div>

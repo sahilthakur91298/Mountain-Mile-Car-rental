@@ -8,7 +8,7 @@ const AboutStory = () => {
           {/* Image */}
           <div className="overflow-hidden rounded-2xl">
             <img
-              src="../images/about/about.jpg"
+              src="../images/about/about.webp"
               alt="Mountain travel experience in Manali"
               loading="lazy"
               className="h-full min-h-[350px] w-full object-cover"

@@ -1,4 +1,3 @@
-
 export const siteConfig = {
   name: "The Mountain Mile",
 
@@ -6,14 +5,24 @@ export const siteConfig = {
 
   url: "https://themountainmile.com",
 
+  description:
+    "The Mountain Mile offers reliable car rental, taxi and sightseeing services in Manali and across Himachal Pradesh.",
+
   contact: {
-    phone: "+918350942627",
-    whatsapp: "917018491298",
-    email: "",
+    phone: "8350942627",
+    whatsapp: "8350942627",
+    email: "acrosumeet@gmail.com",
   },
 
   social: {
-    instagram: "",
+    instagram: "https://www.instagram.com/themountainmile",
     facebook: "",
   },
+
+  location: {
+    city: "Manali",
+    state: "Himachal Pradesh",
+    country: "India",
+  },
 };
+
