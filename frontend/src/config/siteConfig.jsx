@@ -10,7 +10,7 @@ export const siteConfig = {
 
   contact: {
     phone: "8350942627",
-    whatsapp: "8350942627",
+    whatsapp: "918350942627",
     email: "acrosumeet@gmail.com",
   },
 

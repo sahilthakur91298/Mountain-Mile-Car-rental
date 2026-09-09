@@ -1,4 +1,6 @@
-const API_URL = "http://localhost:5000/api";
+import { env } from "../../../config/env.js";
+
+const API_URL =  env.apiUrl
 
 export const submitContact = async (contactData) => {
   try {
