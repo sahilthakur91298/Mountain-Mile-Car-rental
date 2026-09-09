@@ -349,9 +349,9 @@ const BookingForm = () => {
             htmlFor="returnDate"
             className="mb-2 block text-sm font-medium text-[var(--color-secondary)]"
           >
-            Return Date
+            Return Date <span className="text-red-500">*</span>
             <span className="ml-1 text-xs font-normal text-[var(--color-text-muted)]">
-              (Optional)
+              
             </span>
           </label>
 
@@ -360,6 +360,8 @@ const BookingForm = () => {
             type="date"
             min={travelDate || today}
             {...register("returnDate", {
+               required: "Return date is required",
+               
               validate: (value) => {
                 if (!value || !travelDate) return true;
 
