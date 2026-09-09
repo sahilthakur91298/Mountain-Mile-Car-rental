@@ -51,7 +51,7 @@ const cars = [
     specs: { 
       seats: 5, 
       transmission: ["Manual"], 
-      fuel: ["Petrol", "Diesel"], 
+      fuel: ["Petrol"], 
       ac: true 
     },
     pricing: { amount: 7000, unit: "per day" },
@@ -66,7 +66,7 @@ const cars = [
     specs: { 
       seats: 7, 
       transmission: ["Manual"], 
-      fuel: ["Diesel"], 
+      fuel: ["Petrol"], 
       ac: true 
     },
     pricing: { amount: 7000, unit: "per day" },
@@ -96,7 +96,7 @@ const cars = [
     specs: { 
       seats: 7, 
       transmission: ["Manua l"], 
-      fuel: ["Petrol", "Diesel"], 
+      fuel: ["Petrol"], 
       ac: true 
     },
     pricing: { amount: 9000, unit: "per day" },
