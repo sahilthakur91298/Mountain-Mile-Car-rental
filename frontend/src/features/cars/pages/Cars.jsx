@@ -51,11 +51,6 @@ const Cars = () => {
       canonical="/cars"
     />
     <main>
-      <SEO
-        title="Car Rental in Manali"
-        description="Explore comfortable cars and SUVs available for rental in Manali. Choose from automatic and manual vehicles for your mountain journey."
-        canonical={`${siteConfig.url}/cars`}
-        />
       {/* Page Header */}
       <section className="relative overflow-hidden bg-[var(--color-secondary)] py-20 text-white sm:py-24">
         <img
