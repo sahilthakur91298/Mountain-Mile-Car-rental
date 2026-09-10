@@ -1,5 +1,4 @@
 import express from "express";
-import cors from "cors";
 import enquiryRoute from "./routes/enquiryRoute.js"
 import { errorMiddleware } from "./middlewares/enquiryMiddleware.js";
 import { env } from "./config/env.js";
@@ -8,12 +7,6 @@ import { enquiryLimiter } from "./middlewares/rateLimiter.js";
 const app = express();
 
 securityMiddleware(app);
-
-app.use(
-  cors({
-    origin: env.clientUrl,
-  })
-);
 
 app.use(express.json({
   limit: "10kb",

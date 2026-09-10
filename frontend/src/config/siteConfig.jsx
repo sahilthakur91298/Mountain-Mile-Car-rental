@@ -3,7 +3,7 @@ export const siteConfig = {
 
   tagline: "Car Rental & Taxi Service in Manali",
 
-  url: "https://themountainmile.com",
+  url: "https://themountainmile.in",
 
   description:
     "The Mountain Mile offers reliable car rental, taxi and sightseeing services in Manali and across Himachal Pradesh.",
