@@ -110,6 +110,7 @@ const { data, error } = await resend.emails.send({
   });
 
   if (error) {
+    console.log("email sending error",error)
     throw new Error("Email sending failed");
   }
 
