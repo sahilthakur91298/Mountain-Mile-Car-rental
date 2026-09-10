@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://themountainmile.com/sitemap.xml
+Sitemap: https://themountainmile.in/sitemap.xml
