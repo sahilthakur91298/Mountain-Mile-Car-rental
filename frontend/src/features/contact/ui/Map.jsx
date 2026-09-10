@@ -8,7 +8,7 @@ const Map = () => {
           <div className="aspect-[16/7] min-h-[300px]">
             <iframe
               title="The Mountain Mile location in Manali"
-              src="google.com/maps/search/The%20Highland%20Park/@32.287750244140625,77.17731475830078,17z?hl=en"
+              src="https://www.google.com/maps?q=The%20Highland%20Park%2C%20Manali&output=embed"
               className="h-full w-full border-0"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
