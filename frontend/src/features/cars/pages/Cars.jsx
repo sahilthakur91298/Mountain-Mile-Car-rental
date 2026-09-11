@@ -5,7 +5,6 @@ import  useCars  from "../hooks/useCars.js";
 import { useState } from "react";
 import CarFilters from "../ui/CarFilters.jsx";
 import SEO from "../../../shared/components/SEO";
-import { siteConfig } from "../../../config/siteConfig";
 
 const Cars = () => {
   const { cars, loading, error } = useCars();

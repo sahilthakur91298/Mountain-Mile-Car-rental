@@ -2,7 +2,7 @@ import Container from "../../../shared/components/Container";
 import SectionHeading from "../../../shared/components/SectionHeading";
 import DestinationCard from "../ui/DestinationCard";
 import  useDestination from "../hooks/useDestination.js";
-import SEO from "../../../shared/components/SEO.jsx";
+import SEO from "../../../shared/components/SEO";
 import { siteConfig } from "../../../config/siteConfig.jsx";
 
 const Destinations = () => {
